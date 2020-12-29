@@ -1,3 +1,4 @@
+var jishu=1;//用来表示忘记密码属于哪个阶段
 $(function(){
 	/************商品筛选***************/
 	$(".choice .default").click(function(){
@@ -121,5 +122,38 @@ $(function(){
 		$(".two").show();
 		$(".one").hide();
 		$(".forCon ul li").eq(1).addClass("on").siblings("li").removeClass("on");
+		jishu=2;
 	});
+	
+	
+	
+	
+	$(".next1").click(function(){
+		$(".three").show();
+		$(".one").hide();
+		$(".two").hide();
+		$(".forCon ul li").eq(2).addClass("on").siblings("li").removeClass("on");
+		jishu=3;
+	});
+	//忘记密码中的点击上面 
+	$(".forCon>ul>li:eq(0)").click(function(){
+		if(jishu==3 || jishu==2){
+			$(".three").hide();
+			$(".two").hide();
+			$(".one").show();
+			$(".forCon ul li").eq(0).addClass("on").siblings("li").removeClass("on");
+			jishu=1;
+		}
+	})
+	$(".forCon>ul>li:eq(1)").click(function(){
+		if(jishu==3){
+			$(".three").hide();
+			$(".two").show();
+			$(".one").hide();
+			$(".forCon ul li").eq(1).addClass("on").siblings("li").removeClass("on");
+			jishu=2;
+		}
+	})
+	
 })
+

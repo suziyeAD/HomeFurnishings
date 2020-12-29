@@ -11,7 +11,7 @@
 </head>
 <body style="background:#313131">
 <div class="menu-list">
- <a href="main.html" target="mainCont" class="block menu-list-title center" style="border:none;margin-bottom:8px;color:#fff;">起始页</a>
+ <a href="main.jsp" target="mainCont" class="block menu-list-title center" style="border:none;margin-bottom:8px;color:#fff;">起始页</a>
  <ul>
   <li class="menu-list-title">
    <span>订单管理</span>
@@ -19,7 +19,7 @@
   </li>
   <li>
    <ul class="menu-children">
-    <li><a href="order_list.html" title="商品列表" target="mainCont">订单列表</a></li>
+    <li><a href="order_list.jsp" title="商品列表" target="mainCont">订单列表</a></li>
    </ul>
   </li>
  
@@ -29,9 +29,8 @@
   </li>
   <li>
    <ul class="menu-children">
-    <li><a href="product_list.html" title="商品列表" target="mainCont">商品列表</a></li>
-    <li><a href="product_category.html" title="商品分类" target="mainCont">商品分类</a></li>
-    <li><a href="recycle_bin.html" title="商品分类" target="mainCont">商品回收站</a></li>
+    <li><a href="product_list.jsp" title="商品列表" target="mainCont">商品列表</a></li>
+    <li><a href="product_category.jsp" title="商品分类" target="mainCont">商品`站</a></li>
    </ul>
   </li>
   
@@ -41,10 +40,10 @@
   </li>
   <li>
    <ul class="menu-children">
-    <li><a href="user_list.html" title="会员列表" target="mainCont">会员列表</a></li>
-    <li><a href="add_user.html" title="添加会员" target="mainCont">添加会员</a></li>
-    <li><a href="user_rank.html" title="会员等级" target="mainCont">会员等级</a></li>
-    <li><a href="user_message.html" title="会员留言" target="mainCont">会员留言</a></li>
+    <li><a href="user_list.jsp" title="会员列表" target="mainCont">会员列表</a></li>
+    <li><a href="add_user.jsp" title="添加会员" target="mainCont">添加会员</a></li>
+    <li><a href="user_rank.jsp" title="会员等级" target="mainCont">会员等级</a></li>
+    <li><a href="user_message.jsp" title="会员留言" target="mainCont">会员留言</a></li>
    </ul>
   </li>
   
@@ -54,8 +53,8 @@
   </li>
   <li>
    <ul class="menu-children">
-    <li><a href="basic_settings.html" title="站点基本设置" target="mainCont">站点基本设置</a></li>
-    <li><a href="admin_list.html" title="站点基本设置" target="mainCont">站点管理员</a></li>
+    <li><a href="basic_settings.jsp" title="站点基本设置" target="mainCont">站点基本设置</a></li>
+    <li><a href="admin_list.jsp" title="站点基本设置" target="mainCont">站点管理员</a></li>
    </ul>
   </li>
   
@@ -65,7 +64,7 @@
   </li>
   <li>
    <ul class="menu-children">
-    <li><a href="advertising_list.html" title="站点基本设置" target="mainCont">广告列表</a></li>
+    <li><a href="advertising_list.jsp" title="站点基本设置" target="mainCont">广告列表</a></li>
    </ul>
   </li>
     
