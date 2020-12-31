@@ -10,6 +10,7 @@
 </head>
 <body>
 		<!------------------------------head------------------------------>
+		
 		<div class="head">
 			<div class="wrapper clearfix">
 				<div class="clearfix" id="top">
@@ -103,52 +104,87 @@
 				<span>/</span>
 				<a href="proList.jsp">干花花艺</a>
 				<span>/</span>
-				<a href="#" class="on">【最家】非洲菊仿真花干花</a>
+				<a href="#" class="on">${allpro.allProduct_name}</a>
 			</div>
 		</div>
 		<!-----------------------Detail------------------------------>
-		<div class="detCon">
-			<div class="proDet wrapper">
-				<div class="proCon clearfix">
-					<div class="proImg fl">
-						<img class="det" src="img/temp/proDet.jpg" />
-						<div class="smallImg clearfix">
-							<img src="img/temp/proDet01.jpg" data-src="img/temp/proDet01_big.jpg">
-							<img src="img/temp/proDet02.jpg" data-src="img/temp/proDet02_big.jpg">
-							<img src="img/temp/proDet03.jpg" data-src="img/temp/proDet03_big.jpg">
-							<img src="img/temp/proDet04.jpg" data-src="img/temp/proDet04_big.jpg">
-						</div>
-					</div>
-					<div class="fr intro">
-						<div class="title">
-							<h4>【最家】非洲菊仿真花干花</h4>
-							<p>【破损补寄】【适合放室内、卧室、书房、餐桌、办公室、客厅、电视柜等地方】【无理由退换货】【包邮】【白色现代简约花瓶】</p>
-							<span>￥59.90</span>
-						</div>
-						<div class="proIntro">
-							<p>颜色分类</p>
-							<div class="smallImg clearfix categ">
-								<p class="fl"><img src="img/temp/prosmall01.jpg" alt="白瓷花瓶+20支快乐花" data-src="img/temp/proBig01.jpg"></p>
-								<p class="fl"><img src="img/temp/prosmall02.jpg" alt="白瓷花瓶+20支兔尾巴草" data-src="img/temp/proBig02.jpg"></p>
-								<p class="fl"><img src="img/temp/prosmall03.jpg" alt="20支快乐花" data-src="img/temp/proBig03.jpg"></p>
-								<p class="fl"><img src="img/temp/prosmall04.jpg" alt="20支兔尾巴草" data-src="img/temp/proBig04.jpg"></p>
-							</div>
-							<p>数量&nbsp;&nbsp;库存<span>2096</span>件</p>
-							<div class="num clearfix">
-								<img class="fl sub" src="img/temp/sub.jpg">
-								<span class="fl" contentEditable="true">1</span>
-								<img class="fl add" src="img/temp/add.jpg">
-								<p class="please fl">请选择商品属性!</p>
+		<div id="app">
+			<div class="detCon">
+				<div class="proDet wrapper">
+					<div class="proCon clearfix">
+						<div class="proImg fl">
+							<img class="det" src="${allpro.allProduct_location}" />
+							<div class="smallImg clearfix">
+								<img src="${allpro.allProduct_location}" data-src="${allpro.allProduct_location}">
+								<img src="${allpro.allProduct_location}" data-src="${allpro.allProduct_location}">
+								<img src="img/temp/proDet03.jpg" data-src="img/temp/proDet03_big.jpg">
+								<img src="img/temp/proDet04.jpg" data-src="img/temp/proDet04_big.jpg">
 							</div>
 						</div>
-						<div class="btns clearfix">
-							<a href="#2"><p class="buy fl">立即购买</p></a>
-							<a href="#2"><p class="cart fr">加入购物车</p></a>
+						<div class="fr intro">
+							<div class="title">
+								<h4>${allpro.allProduct_name}</h4>
+								<p>【破损补寄】【适合放室内、卧室、书房、餐桌、办公室、客厅、电视柜等地方】【无理由退换货】【包邮】${allpro.allProduct_name}</p>
+								<span>￥${allpro.allProduct_price}</span>
+							</div>
+							<div class="proIntro">
+								<p>颜色分类</p>
+								<div class="smallImg clearfix categ">
+									<p class="fl"><img src="${allpro.allProduct_location}" alt="白瓷花瓶+20支快乐花" data-src="${allpro.allProduct_location}"></p>
+									<p class="fl"><img src="img/temp/prosmall02.jpg" alt="白瓷花瓶+20支兔尾巴草" data-src="img/temp/proBig02.jpg"></p>
+									<p class="fl"><img src="img/temp/prosmall03.jpg" alt="20支快乐花" data-src="img/temp/proBig03.jpg"></p>
+									<p class="fl"><img src="img/temp/prosmall04.jpg" alt="20支兔尾巴草" data-src="img/temp/proBig04.jpg"></p>
+								</div>
+								<p>数量&nbsp;&nbsp;库存<span>${allpro.allProduct_count}</span>件</p>
+								<div class="num clearfix">
+									<img class="fl sub" src="img/temp/sub.jpg">
+									<span class="fl myspan" contentEditable="true" >1</span>
+									<img class="fl add" src="img/temp/add.jpg">
+									<p class="please fl">请选择商品属性!</p>
+								</div>
+							</div>
+							<div class="btns clearfix">
+								<span class=""></span>
+								<a href="#" onclick="aaa(${allpro.allProduct_id})"><p class="buy fl">立即购买</p></a>
+								
+								<a @click="addCart(${allpro.allProduct_id});"><p class="cart fr">加入购物车</p></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			function aaa(id){
+				var num = $('.myspan').html();
+				window.location.href='zorder?sid='+id+'&num='+num
+			}
+		</script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				methods:{
+					addCart:function(id){
+						var num = $('.myspan').html();
+						axios.get('addCart',{
+							params:{
+								sid:id,
+								snum:num
+							}
+						}).then((ret)=>{
+							alert("已加入购物车");
+						})
+					}
+				}
+			});
+		</script>
 		<div class="introMsg wrapper clearfix">
 			<div class="msgL fl">
 				<div class="msgTit clearfix">

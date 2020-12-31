@@ -107,104 +107,66 @@
 			</div>
 		</div>
 		<!-----------------paintCon------------------------------->
-		<div class="paintCon">
-			<section class="wrapper">
-				<h3><img src="img/temp/perfumeTit01.jpg"></h3>
-				<img src="img/temp/xxB01.jpg" />
-				<div class="paintList">
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx01.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx02.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx103.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx104.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx105.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx106.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-				</div>
-			</section>
-			<section class="wrapper">
-				<h3><img src="img/temp/perfumeTit02.jpg"></h3>
-				<img src="img/temp/xxB02.jpg" />
-				<div class="paintList">
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx201.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx202.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx203.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx204.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx205.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/xx206.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>￥299.90</dd>
-						</dl>
-					</a>
-				</div>
-			</section>
+		<div id="app">
+			<div class="paintCon">
+				<section class="wrapper">
+					<h3><img src="img/temp/perfumeTit01.jpg"></h3>
+					<img src="img/temp/xxB01.jpg" />
+					<div class="paintList">
+						<a v-for="(item,index) in list1" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+							<dl>
+								<dt><img :src="list1[index].allProduct_location"></dt>
+								<dd>{{item.allProduct_name}} </dd>
+								<dd>{{item.allProduct_price}}</dd>
+							</dl>
+						</a>
+					</div>
+				</section>
+				<section class="wrapper">
+					<h3><img src="img/temp/perfumeTit02.jpg"></h3>
+					<img src="img/temp/xxB02.jpg" />
+					<div class="paintList">
+						<a v-for="(item,index) in list2" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+							<dl>
+								<dt><img :src="list2[index].allProduct_location"></dt>
+								<dd>{{item.allProduct_name}} </dd>
+								<dd>{{item.allProduct_price}}</dd>
+							</dl>
+						</a>
+					</div>
+				</section>
+			</div>
 		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					list1:[],
+					list2:[]
+				},
+				methods: {
+					z_perfume1: function() {
+						axios.get('perfumeOne').then((ret) => {
+							this.list1 = ret.data;
+						});
+					},
+					z_perfume2:function() {
+						axios.get('perfumeTwo').then((ret) => {
+							this.list2 = ret.data;
+						});
+					},
+					getId:function(id){
+						return 'sale?sid='+id;
+					}
+				},
+				mounted() {
+					this.z_perfume1();
+					this.z_perfume2();
+				}
+			});
+		</script>
 		<!--返回顶部-->
 		<div class="gotop">
 			<a href="cart.jsp">

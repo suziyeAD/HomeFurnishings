@@ -8,21 +8,21 @@
 <link href="style/adminStyle.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.js"></script>
 <script src="js/public.js"></script>
+<script src="js/vue.js" type="text/javascript"></script>
+<script src="js/axios.js" type="text/javascript"></script>
 </head>
 <body>
+<div id="deng">
  <div class="wrap">
   <div class="page-title">
     <span class="modular fl"><i class="order"></i><em>订单列表</em></span>
   </div>
   <div class="operate">
-   <form>
+   <form action="" method="">
     <img src="images/icon_search.gif"/>
-    <input type="text" class="textBox length-long" placeholder="输入订单编号或收件人姓名..."/>
-    <select class="inline-select">
-     <option>未付款</option>
-     <option>已付款</option>
-    </select>
-    <input type="button" value="查询" class="tdBtn"/>
+    <input type="text" id="name" v-model="name" class="textBox length-long" placeholder="输入收货人姓名"/>
+    <input type="text" id="name" v-model="pst" class="inline-select" placeholder="输入已支付、已关闭"/>
+    <input type="button" value="查询" class="tdBtn" @click="pro" />  
    </form>
   </div>
   <table class="list-style Interlaced">
@@ -34,28 +34,28 @@
     <th>订单状态</th>
     <th>操作</th>
    </tr>
-   <tr>
+   <tr v-for="item in list">
     <td>
      <input type="checkbox"/>
-     <a href="order_detail.html">2015041803225</a>
+     <a href="order_detail.jsp"  @click="pro2(item.pid)" >{{item.pid}}</a>
     </td>
     <td class="center">
-     <span class="block">DeatGhost</span>
-     <span class="block">2015-04-18 12:00</span>
+     <span class="block">{{item.ptime}}</span>
     </td>
     <td width="450">
-     <span class="block">张三[18309275673]</span>
-     <address>陕西省西安市未央区255号</address>
+     <span class="block">{{item.aname}}[{{item.aphone}}]</span>
+     <address>{{item.axiangxi}}</address>
     </td>
     <td class="center">
-     <span><i>￥</i><b>58.00</b></span>
+     <span><i>￥</i><b>{{item.pric}}</b></span>
     </td>
     <td class="center">
-     <span>未付款</span>
+     <span>{{item.pst}}</span>
     </td>
     <td class="center">
-     <a href="order_detail.html" class="inline-block" title="查看订单"><img src="images/icon_view.gif"/></a>
-     <a class="inline-block" title="删除订单"><img src="images/icon_trash.gif"/></a>
+
+     <a href="order_detail.jsp" class="inline-block" title="查看订单"  @click="pro2(item.pid)" ><img src="images/icon_view.gif"/></a>
+     <a class="inline-block" title="删除订单" @click="pro3(item.pid)"><img src="images/icon_trash.gif"/></a>
     </td>
    </tr>
   </table>
@@ -64,18 +64,120 @@
       <!-- Operation -->
 	  <div class="BatchOperation fl">
 	   <input type="checkbox" id="del"/>
-	   <label for="del" class="btnStyle middle">全选</label>
-	   <input type="button" value="打印订单" class="btnStyle"/>
-	   <input type="button" value="配货" class="btnStyle"/>
+	   <label for="del" class="btnStyle middle" id="checkall"  name="checkall" οnclick="checkAll(checkall)">全选</label>  
+	   <!-- <input type="checkbox" id="checkall"  name="checkall" οnclick="checkAll(checkall)" />  -->
 	   <input type="button" value="删除订单" class="btnStyle"/>
 	  </div>
 	  <!-- turn page -->
 	  <div class="turnPage center fr">
-	   <a>第一页</a>
-	   <a>1</a>
-	   <a>最后一页</a>
+	   <a  @click="left">第一页</a>
+	   <a v-model="cpage">{{cpage}}</a>
+	   <a @click="right">最后一页</a>
 	  </div>
   </div>
  </div>
+ </div>
+  
+  <script>
+  var vm = new Vue({
+		el:'#deng',
+		data:{
+			list:[],
+			name:'',
+			pst:'',
+			cpage:1
+
+		},
+		methods:{
+			//搜索-姓名-订单状态
+			pro:function(){
+				if(this.name !="" && this.pst!=""){
+					axios.get('../dorder',{
+						params:{
+							name:this.name,
+							pst:this.pst
+						}
+					})
+						.then((ret)=>{
+							this.list=ret.data;
+						});
+				}else if(this.name =="" && this.pst==""){
+					axios.get('../dorder02',{
+					})
+						.then((ret)=>{
+							this.list=ret.data;
+						});
+				}else if(this.name !=""){
+					axios.get('../dorder03',{
+						params:{
+							name:this.name,	
+						}
+					})
+						.then((ret)=>{
+							this.list=ret.data;
+						});
+				} 
+				},
+				pro2:function(id){
+						axios.get('../dorder04',{
+							params:{
+								pid:id,
+								
+							}
+						})
+							.then((ret)=>{
+								this.list=ret.data;
+							});
+		        },
+		        pro3:function(id){
+					axios.get('../ddel',{
+						params:{
+							pid:id,							
+						}
+					})
+						.then((ret)=>{
+							this.list=ret.data;
+							this.init();
+						});
+	        },
+	        right:function(){
+				this.cpage+=1;
+				axios.get('../dpage',{
+					params:{
+						cpage:this.cpage
+					}
+				}).then((ret)=>{
+					this.list=ret.data
+					
+				});
+			},
+			left:function(){
+				this.cpage-=1;
+				axios.get('../dpage',{
+					params:{
+						cpage:this.cpage
+					}
+				}).then((ret)=>{
+					this.list=ret.data
+					
+				});
+			},
+		
+				//页面加载显示
+				init:function(){	
+						axios.get('../dorder02',{
+						})
+							.then((ret)=>{
+								this.list=ret.data;
+							});			
+					}
+		},
+		mounted(){
+		  this.init();
+		}
+	});	
+  </script>
+  
+ 
 </body>
 </html>

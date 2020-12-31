@@ -58,13 +58,13 @@ public class MLoginServlet extends HttpServlet {
 			if(list.get(0).getUser_power()==2){
 				 HttpSession session = request.getSession();
 				 session.setMaxInactiveInterval(60);
-				 session.setAttribute("username", list.get(0));
+				 session.setAttribute("payId", list.get(0).getUser_id());
 				 session.setAttribute("username", username);
 				 request.getRequestDispatcher("index.jsp").forward(request, response);
 			}else if(list.get(0).getUser_power()==1){
-				System.out.println("ÒÑ½øÈë");
 				HttpSession session = request.getSession();
-				 session.setMaxInactiveInterval(60);
+				 //session.setMaxInactiveInterval(60);
+				 session.setAttribute("payId", list.get(0).getUser_id());
 				 session.setAttribute("username", username);
 				 request.getRequestDispatcher("back_stage_management/index.jsp").forward(request, response);
 			}

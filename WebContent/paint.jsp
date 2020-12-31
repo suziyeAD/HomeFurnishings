@@ -108,173 +108,114 @@
 			</div>
 		</div>
 		<!-----------------paintCon------------------------------->
-		<div class="paintCon">
-			<section class="wrapper">
-				<h3><img src="img/temp/tit01.jpg"></h3>
-				<img src="img/temp/paint01.jpg" />
-				<div class="paintList">
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec101.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec102.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec103.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec104.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec105.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec106.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-				</div>
-			</section>
-			<section class="wrapper">
-				<h3><img src="img/temp/tit02.jpg"></h3>
-				<img src="img/temp/paint02.jpg" />
-				<div class="paintList">
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec201.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec202.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec203.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec204.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec205.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-					<a href="proDetail.jsp">
-						<dl>
-							<dt><img src="img/temp/sec206.jpg"></dt>
-							<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-							<dd>299.90</dd>
-						</dl>
-					</a>
-				</div>
-			</section>
-			<section class="wrapper">
-				<h3><img src="img/temp/tit03.jpg"></h3>
-				<div class="paintList third">
-					<p><a href="proDetail.jsp"><img src="img/temp/sec301.jpg" /></a></p>
-					<div class="sec">
-						<a href="proDetail.jsp">
+		<div id="app">
+			<div class="paintCon">
+				<section class="wrapper">
+					<h3><img src="img/temp/tit01.jpg"></h3>
+					<img src="img/temp/paint01.jpg" />
+					<div class="paintList">
+						<a v-for="(item,index) in list1" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
 							<dl>
-								<dt><img src="img/temp/sec302.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
-							</dl>
-						</a>
-						<a href="proDetail.jsp">
-							<dl>
-								<dt><img src="img/temp/sec303.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
-							</dl>
-						</a>
-						<a href="proDetail.jsp">
-							<dl>
-								<dt><img src="img/temp/sec304.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
-							</dl>
-						</a>
-						<a href="proDetail.jsp">
-							<dl>
-								<dt><img src="img/temp/sec305.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
+								<dt><img :src="list1[index].allProduct_location"></dt>
+								<dd>{{item.allProduct_name}} </dd>
+								<dd>{{item.allProduct_price}}</dd>
 							</dl>
 						</a>
 					</div>
-				</div>
-			</section>
-			<section class="wrapper">
-				<h3><img src="img/temp/tit03.jpg"></h3>
-				<div class="paintList last">
-					<p>
-						<a href="proDetail.jsp"><img src="img/temp/sec401.jpg" /></a>
-						<a href="proDetail.jsp"><img src="img/temp/sec402.jpg" /></a>
-					</p>
-					<div class="sec">
-						<a href="proDetail.jsp">
+				</section>
+				<section class="wrapper">
+					<h3><img src="img/temp/tit02.jpg"></h3>
+					<img src="img/temp/paint02.jpg" />
+					<div class="paintList">
+						<a v-for="(item,index) in list2" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
 							<dl>
-								<dt><img src="img/temp/sec403.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
-							</dl>
-						</a>
-						<a href="proDetail.jsp">
-							<dl>
-								<dt><img src="img/temp/sec404.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
-							</dl>
-						</a>
-						<a href="proDetail.jsp">
-							<dl>
-								<dt><img src="img/temp/sec405.jpg"></dt>
-								<dd>新中式客厅山水装饰画墙壁挂画 </dd>
-								<dd>299.90</dd>
+								<dt><img :src="list2[index].allProduct_location"></dt>
+								<dd>{{item.allProduct_name}} </dd>
+								<dd>{{item.allProduct_price}}</dd>
 							</dl>
 						</a>
 					</div>
-				</div>
-			</section>
-			
+				</section>
+				<section class="wrapper">
+					<h3><img src="img/temp/tit03.jpg"></h3>
+					<div class="paintList third">
+						<p><a href="proDetail.jsp"><img src="img/temp/sec301.jpg" /></a></p>
+						<div class="sec">
+							<a v-for="(item,index) in list3" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+								<dl>
+									<dt><img :src="list3[index].allProduct_location"></dt>
+									<dd>{{item.allProduct_name}} </dd>
+									<dd>{{item.allProduct_price}}</dd>
+								</dl>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="wrapper">
+					<h3><img src="img/temp/tit03.jpg"></h3>
+					<div class="paintList last">
+						<p>
+							<a href="proDetail.jsp"><img src="img/temp/sec401.jpg" /></a>
+							<a href="proDetail.jsp"><img src="img/temp/sec402.jpg" /></a>
+						</p>
+						<div class="sec">
+							<a v-for="(item,index) in list4" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+								<dl>
+									<dt><img :src="list4[index].allProduct_location"></dt>
+									<dd>{{item.allProduct_name}} </dd>
+									<dd>{{item.allProduct_price}}</dd>
+								</dl>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					list1:[],
+					list2:[],
+					list3:[],
+					list4:[]
+				},
+				methods: {
+					z_paint1: function() {
+						axios.get('paintOne').then((ret) => {
+							this.list1 = ret.data;
+						});
+					},
+					z_paint2:function() {
+						axios.get('paintTwo').then((ret) => {
+							this.list2 = ret.data;
+						});
+					},
+					z_paint3:function() {
+						axios.get('paintThree').then((ret) => {
+							this.list3 = ret.data;
+						});
+					},
+					z_paint4:function() {
+						axios.get('paintFour').then((ret) => {
+							this.list4 = ret.data;
+						});
+					},
+					getId:function(id){
+						return 'sale?sid='+id;
+					}
+				},
+				mounted() {
+					this.z_paint1();
+					this.z_paint2();
+					this.z_paint3();
+					this.z_paint4();
+				}
+			});
+		</script>
+		
 		<!--返回顶部-->
 		<div class="gotop">
 			<a href="cart.jsp">

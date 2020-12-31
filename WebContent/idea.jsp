@@ -103,235 +103,157 @@
 			</div>
 		</div>
 		<!------------------------------imgList1------------------------------>
-		<div class="imgList1">
-			<div class="wrapper">
-				<div class="box1">
-					<a href="proDetail.jsp" class="banner"><img src="img/idea1.jpg"/></a>
-					<ul>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea2.jpg"/></dt>
-									<dd>【最家】创意家居饰品工艺品装饰三口之家</dd>
-									<dd>¥199.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea3.jpg"/></dt>
-									<dd>【最家】创意家居饰品工艺品装饰三口鹿摆设</dd>
-									<dd>¥78.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea4.jpg"/></dt>
-									<dd>【最家】简约欧式装饰五彩缤纷花朵</dd>
-									<dd>¥19.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea5.jpg"/></dt>
-									<dd>【最家】客厅餐桌创意插花桌面摆件</dd>
-									<dd>¥52.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea6.jpg"/></dt>
-									<dd>【最家】简约欧式陶瓷花瓶三件套</dd>
-									<dd>¥22.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea7.jpg"/></dt>
-									<dd>【最家】简约可爱创意玻璃水杯</dd>
-									<dd>¥22.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea8.jpg"/></dt>
-									<dd>【最家】简约可爱创意玻璃拼盘</dd>
-									<dd>¥33.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea9.jpg"/></dt>
-									<dd>【最家】创意亲嘴鱼陶瓷装饰摆件</dd>
-									<dd>¥99.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp">
-								<dl>
-									<dt><img src="img/idea10.jpg"/></dt>
-									<dd>【最家】创意多彩种子收纳摆件</dd>
-									<dd>¥49.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<h2><img src="img/ih5.jpg"/></h2>
-				<div class="box2">
-					<a href="proDetail.jsp" class="banner"><img src="img/idea22.jpg"/></a>
-					<ul>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id1.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id2.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id3.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id4.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id5.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id6.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id7.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id8.jpg"/></dt>
-									<dd>【最家】时尚家居摆件简约创意装饰品</dd>
-									<dd>¥98.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<h2><img src="img/ih6.jpg"/></h2>
-				<div class="box3">
-					<ul>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id9.jpg"/></dt>
-									<dd>【最家】创意摆件自行车复古</dd>
-									<dd>¥288.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id10.jpg"/></dt>
-									<dd>【最家】创意女孩秋千公主荡秋千</dd>
-									<dd>¥200.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id11.jpg"/></dt>
-									<dd>【最家】创意墙式挂饰水瓶</dd>
-									<dd>¥50.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id12.jpg"/></dt>
-									<dd>【最家】创意两只鹿</dd>
-									<dd>¥99.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id13.jpg"/></dt>
-									<dd>【最家】创意两只小象</dd>
-									<dd>¥170.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id14.jpg"/></dt>
-									<dd>【最家】简约客厅电视现代中式家居摆件</dd>
-									<dd>¥179.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id15.jpg"/></dt>
-									<dd>【最家】创意样板房树脂工艺品</dd>
-									<dd>¥188.00</dd>
-								</dl>
-							</a>
-						</li>
-						<li><a href="proDetail.jsp" class="on">
-								<dl>
-									<dt><img src="img/id16.jpg"/></dt>
-									<dd>【最家】创意笔筒小象</dd>
-									<dd>¥30.00</dd>
-								</dl>
-							</a>
-						</li>
-					</ul>
+		<div id="app">
+			<div class="imgList1">
+				<div class="wrapper">
+					<div class="box1">
+						<a href="proDetail.jsp" class="banner"><img src="img/idea1.jpg"/></a>
+						<ul>
+							<li v-for="(item,index) in list1"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list1[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+						<ul>
+							<li v-for="(item,index) in list2"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list2[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+						<ul>
+							<li v-for="(item,index) in list3"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list3[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<h2><img src="img/ih5.jpg"/></h2>
+					<div class="box2">
+						<a href="proDetail.jsp" class="banner"><img src="img/idea22.jpg"/></a>
+						<ul>
+							<li v-for="(item,index) in list4"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list4[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+						<ul>
+							<li v-for="(item,index) in list5"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list5[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<h2><img src="img/ih6.jpg"/></h2>
+					<div class="box3">
+						<ul>
+							<li v-for="(item,index) in list6"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list6[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+						<ul>
+							<li v-for="(item,index) in list7"><a href="proDetail.jsp" :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+									<dl>
+										<dt><img :src="list7[index].allProduct_location"/></dt>
+										<dd>{{item.allProduct_name}}</dd>
+										<dd>¥{{item.allProduct_price}}</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					list1:[],
+					list2:[],
+					list3:[],
+					list4:[],
+					list5:[],
+					list6:[],
+					list7:[]
+				},
+				methods: {
+					z_idea1: function() {
+						axios.get('ideaOne1').then((ret) => {
+							this.list1 = ret.data;
+						});
+					},
+					z_idea2:function() {
+						axios.get('ideaOne2').then((ret) => {
+							this.list2 = ret.data;
+						});
+					},
+					z_idea3:function() {
+						axios.get('ideaOne3').then((ret) => {
+							this.list3 = ret.data;
+						});
+					},
+					z_idea4:function() {
+						axios.get('ideaTwo1').then((ret) => {
+							this.list4 = ret.data;
+						});
+					},
+					z_idea5:function() {
+						axios.get('ideaTwo2').then((ret) => {
+							this.list5 = ret.data;
+						});
+					},
+					z_idea6:function() {
+						axios.get('ideaThree1').then((ret) => {
+							this.list6 = ret.data;
+						});
+					},
+					z_idea7:function() {
+						axios.get('ideaThree2').then((ret) => {
+							this.list7 = ret.data;
+						});
+					},
+					getId:function(id){
+						return 'sale?sid='+id;
+					}
+				},
+				mounted() {
+					this.z_idea1();
+					this.z_idea2();
+					this.z_idea3();
+					this.z_idea4();
+					this.z_idea5();
+					this.z_idea6();
+					this.z_idea7();
+				}
+			});
+		</script>
 		
 		<!--返回顶部-->
 		<div class="gotop">

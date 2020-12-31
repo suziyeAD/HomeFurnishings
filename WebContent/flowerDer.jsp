@@ -123,206 +123,42 @@
 			</div>
 		</div>
 		<!----------------proList------------------------->
-		<ul class="proList wrapper clearfix">
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro01.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro02.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro03.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/vase01.jpg"></dt>
-						<dd>【最家】创意现代简约白瓷干花花瓶摆件</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/vase02.jpg"></dt>
-						<dd>【最家】现代简约白色条纹干花花瓶摆件</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/vase03.jpg"></dt>
-						<dd>【最家】北欧现代陶瓷花瓶摆件</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/vase04.jpg"></dt>
-						<dd>【最家】现代简约客厅茶几白色陶瓷花瓶摆件 </dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/vase05.jpg"></dt>
-						<dd>【最家】仿木纹漆金裂纹台面花瓶系列套装</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/vase06.jpg"></dt>
-						<dd>【最家】仿木竖条纹雅致台面花瓶</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro04.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro05.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro06.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro07.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro08.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro01.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro02.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro03.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro04.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro05.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro06.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro07.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-			<li>
-				<a href="proDetail.jsp">
-					<dl>
-						<dt><img src="img/temp/pro08.jpg"></dt>
-						<dd>【最家】跳舞兰仿真花干花</dd>
-						<dd>￥17.90</dd>
-					</dl>
-				</a>
-			</li>
-		</ul>
+		<div id="app">
+			<ul class="proList wrapper clearfix">
+				<li v-for="(item,index) in list">
+					<a :key="item.allProduct_id" :href="getId(item.allProduct_id)">
+						<dl>
+							<dt><img :src="list[index].allProduct_location"></dt>
+							<dd>{{item.allProduct_name}}</dd>
+							<dd>￥{{item.allProduct_price}}</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					list: []
+				},
+				methods: {
+					z_flowerDer: function() {
+						axios.get('flowerDer').then((ret) => {
+							this.list = ret.data;
+						});
+					},
+					getId:function(id){
+						return 'sale?sid='+id;
+					}
+				},
+				mounted() {
+					this.z_flowerDer();
+				}
+			});
+		</script>
 		<!----------------mask------------------->
 		<div class="mask"></div>
 		<!-------------------mask内容------------------->

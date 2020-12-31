@@ -95,131 +95,153 @@
 				</ul>
 			</div>
 		</div>
-		<div class="order cart mt">
-			<!-----------------site------------------->
-			<div class="site">
-				<p class="wrapper clearfix">
-					<span class="fl">订单确认</span>
-					<img class="top" src="img/temp/cartTop02.png">
-				</p>
-			</div>
-			<!-----------------orderCon------------------->
-			<div class="orderCon wrapper clearfix">
-				<div class="orderL fl">
-					<!--------h3---------------->
-					<h3>收件信息<a href="#" class="fr">新增地址</a></h3>
-					<!--------addres---------------->
-					<div class="addres clearfix">
-						<div class="addre fl on">
-							<div class="tit clearfix">
-								<p class="fl">张三1
-									<span class="default">[默认地址]</span>
-								</p>
-								<p class="fr">
-									<a href="#">删除</a>
-									<span>|</span>
-									<a href="#" class="edit">编辑</a>
-								</p>
-							</div>
-							<div class="addCon">
-								<p>河北省&nbsp;唐山市&nbsp;路北区&nbsp;大学生公寓村</p>
-								<p>15732570937</p>
-							</div>
-						</div>
-						<div class="addre fl">
-							<div class="tit clearfix">
-								<p class="fl">张三2
-								</p>
-								<p class="fr">
-									<a href="#" class="setDefault">设为默认</a>
-									<span>|</span>
-									<a href="#">删除</a>
-									<span>|</span>
-									<a href="#" class="edit">编辑</a>
-								</p>
-							</div>
-							<div class="addCon">
-								<p>河北省&nbsp;唐山市&nbsp;路北区&nbsp;大学生公寓村</p>
-								<p>15732570937</p>
-							</div>
-						</div>
-						<div class="addre fl">
-							<div class="tit clearfix">
-								<p class="fl">张三3
-								</p>
-								<p class="fr">
-									<a href="#" class="setDefault">设为默认</a>
-									<span>|</span>
-									<a href="#">删除</a>
-									<span>|</span>
-									<a href="#" class="edit">编辑</a>
-								</p>
-							</div>
-							<div class="addCon">
-								<p>河北省&nbsp;唐山市&nbsp;路北区&nbsp;大学生公寓村</p>
-								<p>15732570937</p>
-							</div>
-						</div>
-					</div>
-					<h3>支付方式</h3>
-					<!--------way---------------->
-					<div class="way clearfix">
-						<img class="on" src="img/temp/way01.jpg"> 
-						<img src="img/temp/way02.jpg"> 
-						<img src="img/temp/way03.jpg"> 
-						<img src="img/temp/way04.jpg"> 
-					</div>
-					<h3>选择快递</h3>
-					<!--------dis---------------->
-					<div class="dis clearfix">
-						<span class="on">顺风快递</span>
-						<span>百世汇通</span>
-						<span>圆通快递</span>
-						<span>中通快递</span>
-					</div>
+		<div id="app">
+			<div class="order cart mt">
+				<!-----------------site------------------->
+				<div class="site">
+					<p class="wrapper clearfix">
+						<span class="fl">订单确认</span>
+						<img class="top" src="img/temp/cartTop02.png">
+					</p>
 				</div>
-				<div class="orderR fr">
-					<div class="msg">
-						<h3>订单内容<a href="cart.jsp" class="fr">返回购物车</a></h3>
-						<!--------ul---------------->
-						<ul class="clearfix">
-							<li class="fl">
-								<img src="img/temp/order01.jpg">
-							</li>
-							<li class="fl">
-								<p>创意现代简约干花花瓶摆件</p>
-								<p>颜色分类：烟灰色玻璃瓶</p>
-								<p>数量：1</p>
-							</li>
-							<li class="fr">￥69.90</li>
-						</ul>
-						<ul class="clearfix">
-							<li class="fl">
-								<img src="img/temp/order02.jpg">
-							</li>
-							<li class="fl">
-								<p>创意现代简约干花花瓶摆件</p>
-								<p>颜色分类：烟灰色玻璃瓶</p>
-								<p>数量：1</p>
-							</li>
-							<li class="fr">￥69.90</li>
-						</ul>
+				<!-----------------orderCon------------------->
+				<div class="orderCon wrapper clearfix">
+					<div class="orderL fl">
+						<!--------h3---------------->
+						<h3>收件信息<a href="#" class="fr">新增地址</a></h3>
+						<!--------addres---------------->
+						<div class="addres clearfix">
+							<div class="addre fl on">
+								<div class="tit clearfix">
+									<p class="fl">张三1
+										<span class="default">[默认地址]</span>
+									</p>
+									<p class="fr">
+										<a href="#">删除</a>
+										<span>|</span>
+										<a href="#" class="edit">编辑</a>
+									</p>
+								</div>
+								<div class="addCon">
+									<p>河北省&nbsp;唐山市&nbsp;路北区&nbsp;大学生公寓村</p>
+									<p>15732570937</p>
+								</div>
+							</div>
+							<div class="addre fl">
+								<div class="tit clearfix">
+									<p class="fl">张三2
+									</p>
+									<p class="fr">
+										<a href="#" class="setDefault">设为默认</a>
+										<span>|</span>
+										<a href="#">删除</a>
+										<span>|</span>
+										<a href="#" class="edit">编辑</a>
+									</p>
+								</div>
+								<div class="addCon">
+									<p>河北省&nbsp;唐山市&nbsp;路北区&nbsp;大学生公寓村</p>
+									<p>15732570937</p>
+								</div>
+							</div>
+							<div class="addre fl">
+								<div class="tit clearfix">
+									<p class="fl">张三3
+									</p>
+									<p class="fr">
+										<a href="#" class="setDefault">设为默认</a>
+										<span>|</span>
+										<a href="#">删除</a>
+										<span>|</span>
+										<a href="#" class="edit">编辑</a>
+									</p>
+								</div>
+								<div class="addCon">
+									<p>河北省&nbsp;唐山市&nbsp;路北区&nbsp;大学生公寓村</p>
+									<p>15732570937</p>
+								</div>
+							</div>
+						</div>
+						<h3>支付方式</h3>
+						<!--------way---------------->
+						<div class="way clearfix">
+							<img class="on" src="img/temp/way01.jpg"> 
+							<img src="img/temp/way02.jpg"> 
+							<img src="img/temp/way03.jpg"> 
+							<img src="img/temp/way04.jpg"> 
+						</div>
+						<h3>选择快递</h3>
+						<!--------dis---------------->
+						<div class="dis clearfix">
+							<span class="on">顺风快递</span>
+							<span>百世汇通</span>
+							<span>圆通快递</span>
+							<span>中通快递</span>
+						</div>
 					</div>
-					<!--------tips---------------->
-					<div class="tips">
-						<p><span class="fl">商品金额：</span><span class="fr">￥139.80</span></p>
-						<p><span class="fl">优惠金额：</span><span class="fr">￥0.00</span></p>
-						<p><span class="fl">运费：</span><span class="fr">免运费</span></p>
+					<div class="orderR fr">
+						<div class="msg">
+							<h3>订单内容<a href="cart.jsp" class="fr">返回购物车</a></h3>
+							<!--------ul---------------->
+							<ul class="clearfix" v-for="(item,index) in list">
+								<li class="fl">
+									<img :src="list[index].shoppingCart_location">
+								</li>
+								<li class="fl">
+									<p>{{item.shoppingCart_name}}</p>
+									<p>颜色分类：烟灰色玻璃瓶</p>
+									<p>数量：{{item.shoppingCart_count}}</p>
+								</li>
+								<li class="fr">￥{{shoppingCart_price}}</li>
+							</ul>
+						</div>
+						<!--------tips---------------->
+						<div class="tips">
+							<p><span class="fl">商品金额：</span><span class="fr" v-model="sum">￥{{sum}}</span></p>
+							<p><span class="fl">优惠金额：</span><span class="fr">￥0.00</span></p>
+							<p><span class="fl">运费：</span><span class="fr">免运费</span></p>
+						</div>
+						<!--------tips count---------------->
+						<div class="count tips">
+							<p><span class="fl">合计：</span><span class="fr" v-model="sum">￥{{sum}}</span></p>
+						</div>
+						<!--<input type="button" name="" value="去支付"> -->
+						<a href="ok" class="pay">去支付</a>
 					</div>
-					<!--------tips count---------------->
-					<div class="count tips">
-						<p><span class="fl">合计：</span><span class="fr">￥139.80</span></p>
-					</div>
-					<!--<input type="button" name="" value="去支付"> -->
-					<a href="ok.jsp" class="pay">去支付</a>
 				</div>
 			</div>
 		</div>
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		
+		<script>
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					list:[],
+					sum:0
+				},
+				methods:{
+					z_order:function(){
+						axios.get('order').then((ret)=>{
+							this.list=ret.data;
+							let sum = 0;
+							this.list.forEach((item) => {
+							   //遍历shoppingCart_price这个字段，并累加
+							   sum += item.shoppingCart_price*item.shoppingCart_count;
+							 });
+							//返回
+							sum=parseFloat(sum).toFixed(2);
+							this.sum = sum;
+						});
+					}
+				},
+				mounted(){
+					this.z_order();
+				}
+			});
+		</script>
+		
 		<!--编辑弹框-->
 		<!--遮罩-->
 		<div class="mask"></div>

@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
-encoding//WebContent/address.html=UTF-8
+encoding//WebContent/address.jsp=UTF-8
+encoding//src/com/dt/dao/PayDao.java=UTF-8
+encoding//src/com/dt/dao/impl/BaseDaoImpl.java=UTF-8
+encoding//src/com/dt/servlet/PageServlet.java=UTF-8
+encoding//src/com/dt/servlet/PayedProductServlet.java=UTF-8

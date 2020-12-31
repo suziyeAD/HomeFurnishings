@@ -109,7 +109,7 @@
 				<div class="zuo fl">
 					<h3>
 						<a href="#"><img src="img/tx.png"/></a>
-						<p class="clearfix"><span class="fl">[羊羊羊]</span><span class="fr">[退出登录]</span></p>
+						<p class="clearfix"><span class="fl">${username }</span><a class="fr"  href="MLoginout">[退出登录]</a></p>
 					</h3>
 					<div>
 						<h4>我的交易</h4>
@@ -225,6 +225,8 @@
 		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
-		
+		<script type="text/javascript">
+			
+		</script>
 	</body>
 </html>

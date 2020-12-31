@@ -30,7 +30,7 @@
   <li>
    <ul class="menu-children">
     <li><a href="product_list.jsp" title="商品列表" target="mainCont">商品列表</a></li>
-    <li><a href="product_category.jsp" title="商品分类" target="mainCont">商品`站</a></li>
+    <li><a href="recycle_bin.jsp" title="商品分类" target="mainCont">商品回收站</a></li>
    </ul>
   </li>
   
@@ -70,6 +70,5 @@
     
  </ul>
 </div>
-<div class="menu-footer">© 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></div>
 </body>
 </html>
