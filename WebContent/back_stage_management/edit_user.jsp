@@ -66,7 +66,7 @@
 				}).then(function(ret){
 					
 					var flag = ret.data;
-					alert(flag);
+					
 				});
 				//location.reload();
 			}

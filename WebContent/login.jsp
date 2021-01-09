@@ -17,7 +17,7 @@
 				<div class="msg-warn hide"><b></b>公共场所不建议自动登录，以防账号丢失</div>
 				<p><input type="text" name="username"  value="${username }" placeholder="昵称/邮箱/手机号"></p>
 				<p>
-					<input type="text" name="password" v-model="password" @blur="checkPwd" value="" placeholder="密码">
+					<input type="password" name="password" v-model="password" @blur="checkPwd" value="" placeholder="密码">
 					<span style="position:absolute;font-size:15px;margin-top:10px;color:#c10000">${selectResult }{{prompt}}</span>
 				</p>
 				<p><input type="submit" name="" :disabled="disabled"  value="登  录"></p>

@@ -130,7 +130,7 @@
 					}
 				}).then((ret)=>{
 					var flag = ret.data;
-					alert(flag);
+					
 					location.reload();
 				});
 			},
@@ -145,7 +145,7 @@
 					}
 				}).then((ret)=>{	
 					this.list=ret.data;
-					alert(ret.data);
+					
 				});
 			},
 			init:function(){

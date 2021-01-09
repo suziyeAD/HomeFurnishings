@@ -37,9 +37,9 @@
 				<div style="overflow: hidden;">
 					<!-- Operation -->
 					<div class="BatchOperation fl">
-						<input type="checkbox" id="del" /> <label for="del" class="btnStyle middle">全选</label> <input type="button" value="批量彻底删除"
+					<!-- 	<input type="checkbox" id="del" /> <label for="del" class="btnStyle middle">全选</label> <input type="button" value="批量彻底删除"
 						 class="btnStyle" /> <input type="button" value="批量恢复" class="btnStyle" />
-					</div>
+					</div>  -->
 					<!-- turn page -->
 					<div class="turnPage center fr">
 						<a>第一页</a> <a>1</a> <a>最后一页</a>

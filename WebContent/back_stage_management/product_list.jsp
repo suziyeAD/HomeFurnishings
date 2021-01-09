@@ -76,11 +76,11 @@
     <!-- BatchOperation -->
   <div style="overflow:hidden;">
       <!-- Operation -->
-	  <div class="BatchOperation fl">
+	<!-- <div class="BatchOperation fl">
 	   <input type="checkbox" id="del"/>
 	   <label for="del" class="btnStyle middle">全选</label>
 	   <input type="button" value="批量删除" class="btnStyle"/>
-	  </div>
+	  </div> -->
 	  <!-- turn page -->
 	  <div class="turnPage center fr">
 	   <a>第一页</a>

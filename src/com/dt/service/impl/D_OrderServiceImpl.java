@@ -54,4 +54,20 @@ public class D_OrderServiceImpl implements D_OrderService {
 		return dod.getOrderCount();
 	}
 
+
+
+	@Override
+	public List<Order> getOrder(String aname, Page page) {
+		
+		return  dod.getOrder(aname, page);
+	}
+
+	@Override
+	public List<Order> getOrder(String aname, String pst, Page page) {
+		
+		return dod.getOrder(aname, pst, page);
+	}
+
+    
+
 }

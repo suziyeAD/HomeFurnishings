@@ -133,7 +133,7 @@ public class D_OrderDaoImpl implements D_OrderDao {
 	}
 		return flag;
 	}
-	//分页
+	//页面加载分页
 	@Override
 	public List<Order> getOrderByPage(Page page) {
 		List<Order> list=null;
@@ -154,7 +154,7 @@ public class D_OrderDaoImpl implements D_OrderDao {
 	}
 		return list;
 	}
-	//统计数据
+	//统计加载的数据
 	@Override
 	public List<Order> getOrderCount() {
 		List<Order> list=null;
@@ -175,19 +175,52 @@ public class D_OrderDaoImpl implements D_OrderDao {
 	}
 		return list;
 	}
-	@Test
-	public void shou(){
-		D_OrderDao dd=new D_OrderDaoImpl();
-		try {
-			List<Order> order02 = dd.getOrder02();
-			for (Order  ff: order02) {
-				System.out.println(ff.toString());
-				
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+    //名字查询分页
+	@Override
+	public List<Order> getOrder(String aname, Page page) {
+		List<Order> list=null;
+		  QueryRunner qr= new QueryRunner(Dbutils_.getDataSource());
+	  try {
+		  String sql="SELECT p.`payedProduct_orderId` pid,p.`payedProduct_paytime` ptime,a.`address_name` aname,a.`addressr_phone` aphone,a.`addressr_province` apro,a.`addressr_city` acity, a.`addressr_qvyu` aqvyu,a.`addressr_xian` axian,a.`addressr_xiangxi` axiangxi,(p.`payedProduct_price` * p.`payedProduct_count`) pric,p.`payedProduct_orderStatus` pst "
+		  		+ "FROM payedproduct p "
+		  		+ "INNER JOIN address a "
+		  		+ "ON p.`payedProduct_orderId` = a.`addressProduct_orderId` "
+		  		+ "WHERE a.`address_name` LIKE '%"+aname+"%' "
+		  		+ "UNION "
+		  		+ "SELECT  c.`closedOrder_orderId` cid, c.`closedOrder_closetime` ctime, a.`address_name` aname, a.`addressr_phone` aphone,  a.`addressr_province` apro,  a.`addressr_city` acity,  a.`addressr_qvyu` aqvyu,  a.`addressr_xian` axian,  a.`addressr_xiangxi` axiangxi,(  c.`closedOrder_price` * c.`closedOrder_count`) cpric, c.`shoppingCart_orderStatus` sct "
+		  		+ "FROM `closedorder` c "
+		  		+ "INNER JOIN `address` a "
+		  		+ "ON a.`addressProduct_orderId` = c.`closedOrder_orderId` "
+		  		+ "WHERE a.`address_name` LIKE '%"+aname+"%'  LIMIT "+(page.getCurrentpage()-1)*(page.getPagesize()) +","+page.getPagesize()+"";
+		  list=qr.query(sql,new BeanListHandler<Order>(Order.class));
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+		return list;
+	}
+	//名字、支付状态查询分页
+	@Override
+	public List<Order> getOrder(String aname, String pst, Page page) {
+		List<Order> list=null;
+		  QueryRunner qr= new QueryRunner(Dbutils_.getDataSource());
+	  try {
+		  String sql="SELECT p.`payedProduct_orderId` pid,p.`payedProduct_paytime` ptime, a.`address_name` aname,a.`addressr_phone` aphone,a.`addressr_province` apro,a.`addressr_city` acity,a.`addressr_qvyu` aqvyu,a.`addressr_xian` axian,a.`addressr_xiangxi` axiangxi,(p.`payedProduct_price` * p.`payedProduct_count`) pric,p.`payedProduct_orderStatus` pst "
+		  		+ "FROM payedproduct p "
+		  		+ "INNER JOIN address a ON p.`payedProduct_orderId` = a.`addressProduct_orderId` "
+		  		+ "WHERE a.`address_name`='"+aname+"' "
+		  		+ "AND   p.`payedProduct_orderStatus`='"+pst+"'"
+		  		+ "UNION "
+		  		+ "SELECT c.`closedOrder_orderId` cid,c.`closedOrder_closetime` ctime,a.`address_name` aname,a.`addressr_phone` aphone,a.`addressr_province` apro,a.`addressr_city` acity,a.`addressr_qvyu` aqvyu,a.`addressr_xian` axian,a.`addressr_xiangxi` axiangxi,( c.`closedOrder_price` * c.`closedOrder_count`) cpric,c.`shoppingCart_orderStatus` sct "
+		  		+ "FROM`closedorder` c "
+		  		+ "INNER JOIN `address` a ON a.`addressProduct_orderId` = c.`closedOrder_orderId` "
+		  		+ "WHERE a.`address_name`='"+aname+"' "
+		  		+ "AND  c.`shoppingCart_orderStatus`='"+pst+"' "
+		  		+ "LIMIT "+(page.getCurrentpage()-1)*(page.getPagesize()) +","+page.getPagesize()+"";
+		  list=qr.query(sql,new BeanListHandler<Order>(Order.class));
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+		return list;
 	}
 	
 }

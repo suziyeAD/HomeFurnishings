@@ -17,8 +17,14 @@ public interface D_OrderDao {
 	//根据id删除订单
 	int[] delOrder(String id);
 	
-	//分页
-	List<Order> getOrderByPage(Page page);
+	
+	
 	//统计数量
 	List<Order> getOrderCount();
+	//页面加载分页/点击查询
+	List<Order> getOrderByPage(Page page);
+	//根据姓名分页
+	List<Order> getOrder(String aname,Page page);
+	//根据姓名、订单状态分页
+	List<Order> getOrder(String aname,String pst,Page page);
 }

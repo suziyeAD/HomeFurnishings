@@ -111,7 +111,7 @@
 				<div class="zuo fl">
 					<h3>
 						<a href="#"><img src="img/tx.png"/></a>
-						<p class="clearfix"><span class="fl">[羊羊羊]</span><span class="fr">[退出登录]</span></p>
+						<p class="clearfix"><span class="fl" v-model="loginName">${username }</span><span class="fr">[退出登录]</span></p>
 					</h3>
 					<div>
 						<h4>我的交易</h4>
@@ -152,28 +152,17 @@
 		<!--编辑弹框-->
 		<!--遮罩-->
 		<div class="mask"></div>
-		<div class="adddz">
+		<div class="adddz" id="app">
 			<form action="#" method="get">
-				<input type="text" placeholder="姓名" class="on" />
-				<input type="text" placeholder="手机号" />
-				<div class="city">
-					<select name="">
-						<option value="省份/自治区">省份/自治区</option>
-					</select>
-					<select>
-						<option value="城市/地区">城市/地区</option>
-					</select>
-					<select>
-						<option value="区/县">区/县</option>
-					</select>
-					<select>
-						<option value="配送区域">配送区域</option>
-					</select>
+				<input type="text" v-model="uname" placeholder="姓名" class="on" />
+				<input type="text" v-model="tel" placeholder="手机号" />
+				<!-- 四级联动 -->
+				<div class="city-picker-select">
 				</div>
-				<textarea name="" rows="" cols="" placeholder="详细地址"></textarea>
-				<input type="text" placeholder="邮政编码" />
+				<textarea name="" rows="" v-model="address" cols="" placeholder="详细地址"></textarea>
+				<input type="text" v-model="mail" placeholder="邮政编码" />
 				<div class="bc">
-					<input type="button" value="保存" />
+					<input type="button" value="保存" @click="addAddress" />
 					<input type="button" value="取消" />
 				</div>
 			</form>
@@ -182,19 +171,9 @@
 			<form action="#" method="get">
 				<input type="text"  class="on" value="六六六" />
 				<input type="text" value="157****0022" />
-				<div class="city">
-					<select name="">
-						<option value="省份/自治区">河北省</option>
-					</select>
-					<select>
-						<option value="城市/地区">唐山市</option>
-					</select>
-					<select>
-						<option value="区/县">路北区</option>
-					</select>
-					<select>
-						<option value="配送区域">火炬路</option>
-					</select>
+				
+				<div class="city ">
+					
 				</div>
 				<textarea name="" rows="" cols="" placeholder="详细地址">高新产业园</textarea>
 				<input type="text" placeholder="邮政编码" value="063000"/>
@@ -262,5 +241,55 @@
 		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/city-picker.css">
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/citydata.min.js"></script>
+		<script type="text/javascript" src="js/cityPicker-2.0.4.js"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/axios.js" type="text/javascript"></script>
+		<script>
+		
+				var select = $('.city-picker-select').cityPicker({
+				    dataJson: cityData,
+				    renderMode: false,
+				    autoSelected: false
+				});
+				
+				// 设置城市
+				select.setCityVal('湖北省, 武汉市, 卓刀泉区, 坞城街道')
+				//获取选定的城市的值
+				var data=select.getCityVal();
+				var vm=new Vue({
+					el:'#app',
+					data:{
+						loginName:"",
+						uname:'',
+						tel:'',
+						province:data[0].name,
+						city:data[1].name,
+						County:data[2].name,
+						address:"",
+						mail:''
+					},
+					methods:{
+						addAddress:function(){
+							axios.get('addAddress',{
+								params:{
+									loginName:this.loginName,
+									uname:this.uname,
+									tel:this.tel,
+									province:this.province,
+									city:this.city,
+									County:this.County,
+									address:this.address,
+									mail:this.mail
+								}
+							}).then(function(ret){
+								
+							}); 
+						}
+					}
+				})
+		</script>
 	</body>
 </html>

@@ -32,7 +32,7 @@ public class BizImpl implements BizDao{
 
 	@Override
 	public List<Info> getInfoAllList() {
-		String sql = "SELECT * FROM allproduct";
+		String sql = "SELECT * FROM allproduct LIMIT 0,17";
 		List<Info> list = null;
 		try {
 			list=qr.query(sql, new BeanListHandler<Info>(Info.class));

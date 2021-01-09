@@ -19,11 +19,11 @@
 					<span style="position:absolute;font-size:15px;margin-top:10px;color:#c10000">{{promptUser}}</span>
 				</p>
 				<p>
-					<input type="text" name="" value="" v-model="password" @blur="checkPwd"  placeholder="请输入密码">
+					<input type="password" name="" value="" v-model="password" @blur="checkPwd"  placeholder="请输入密码">
 					<span style="position:absolute;font-size:15px;margin-top:10px;color:#c10000">{{promptPwd}}</span>
 				</p>
 				<p>
-					<input type="text" name="" value="" v-model="confirePwd" @blur="checkConPwd" placeholder="请确认密码">
+					<input type="password" name="" value="" v-model="confirePwd" @blur="checkConPwd" placeholder="请确认密码">
 					<span style="position:absolute;font-size:15px;margin-top:10px;color:#c10000">{{promptConPwd}}</span>
 				</p>
 				<p class="txtL txt"><input class="code" v-model="VerificationCode" style="vertical-align: middle" type="text" name="" value="" placeholder="验证码">

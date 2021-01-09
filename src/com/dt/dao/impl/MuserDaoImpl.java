@@ -35,9 +35,11 @@ public class MuserDaoImpl implements MUserDao {
 		List<MUserInfo> list=null;
 		QueryRunner qr=new QueryRunner(Dbutils_.getDataSource());//得到数据源
 		try {
-			String sql="SELECT * FROM USER WHERE user_name=? OR user_email=? OR user_phone =? AND user_pwd = ?";
+			
+			String sql="SELECT * FROM USER WHERE (user_name=? OR user_email=? OR user_phone =?) AND user_pwd = ?";
 			//在java所有的类型(type),统一用xxxx.class解析
 			list=qr.query(sql,new BeanListHandler<MUserInfo>(MUserInfo.class),username,username,username,password);
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

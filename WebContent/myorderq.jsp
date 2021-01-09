@@ -167,7 +167,7 @@
 								<li>订单号:{{item.payedProduct_orderId}}</li>
 								<li>在线支付</li>
 							</ul>
-							<p class="fr">订单金额：<span >{{item.payedProduct_price*item.payedProduct_count}}</span>元</p>
+							<p class="fr">订单金额：<span >{{towNumber(item.payedProduct_price*item.payedProduct_count)}}</span>元</p>
 						</div>
 						<div class="shohou clearfix" >
 							<a href="#" class="fl"><img :src="list[index].payedProduct_location" /></a>
@@ -190,7 +190,7 @@
 								<li>订单号:{{item2.closedorderproduct_orderId}}</li>
 								<li>在线支付</li>
 							</ul>
-							<p class="fr">订单金额：<span>{{item2.closedorder_price*item2.closedorder_count}}</span>元</p>
+							<p class="fr">订单金额：<span>{{threeNumber(item2.closedorder_price*item2.closedorder_count)}}</span>元</p>
 						</div>
 						<div class="shohou clearfix">
 							<a href="#" class="fl"><img src="img/g1.jpg"/></a>
@@ -285,6 +285,12 @@
 					cpage:1
 				},
 				methods:{
+					towNumber(val) {      
+						 return val.toFixed(2)    
+						},
+					threeNumber(val) {      
+							return val.toFixed(2)    
+						},
 					startfirst:function(){
     					axios.get('pay').then((ret)=>{
     						this.list=ret.data;
