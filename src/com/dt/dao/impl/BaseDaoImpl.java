@@ -32,6 +32,8 @@ public class BaseDaoImpl implements BaseDao {
 	public List<AllProduct> getIndexFlower2() {
 		List<AllProduct> list = null;
 		String sql = "SELECT * FROM AllProduct WHERE AllProduct_picturename='装饰摆件' limit 3,3";
+		
+		
 		try {
 			list = qr.query(sql, new BeanListHandler<>(AllProduct.class));
 		} catch (SQLException e) {
